@@ -58,6 +58,7 @@
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
+      height: 100%;
     }
 
     .project-card:hover {
@@ -111,63 +112,73 @@
     a:hover {
       text-decoration: underline;
     }
+
+    .profile {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 20px auto;
+      display: block;
+    }
   </style>
 </head>
 <body>
 
-  <header style="background-image: url('profile.jpg'); background-size: cover; height: 300px;">
-  <h1 style="color: white; padding: 100px;">Welcome to My Portfolio</h1>
-</header>
+  <!-- Header Section -->
+  <header style="background-image: url('profile.jpg'); background-size: cover; height: 300px; display: flex; align-items: center; justify-content: center;">
+    <h1 style="color: white; background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">Welcome to My Portfolio</h1>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <h1>Hi, I'm Simran Rathore</h1>
-    <p>Web Developer | Python | Django | HTML | CSS | JavaScript</p>
+    <p>Web Developer | Python | Django | HTML | CSS </p>
     <a href="#projects" class="btn btn-light btn-lg mt-3">View My Work</a>
   </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
+  <!-- About Section -->
+  <section id="about" class="container py-5 text-center">
+    <h2 class="section-title">About Me</h2>
     <img src="profile.jpg" alt="Simran Rathore" class="profile" />
-    <p style="max-width: 600px; margin: 0 auto; font-size: 18px; line-height: 1.6;">
+    <p style="max-width: 600px; margin: 20px auto; font-size: 18px; line-height: 1.6;">
       Hi, I'm <strong>Simran Rathore</strong>. I'm pursuing B.Tech in Computer Science from Prashanti Institute.
-      I'm passionate about full-stack web development and have hands-on experience with HTML, CSS, JavaScript, Python, and Django.
+      I'm passionate about full-stack web development and have hands-on experience with HTML, CSS,  Python, and Django.
     </p>
   </section>
 
-  <section id="resume">
-    <h2>My Resume</h2>
-    <a href="Simran_Resume.pdf" download class="btn">Download Resume</a>
-    <br /><br />
-    <iframe src="Simran_Resume.pdf" width="80%" height="500px" style="border: 1px solid #ccc;"></iframe>
+  <!-- Resume Section -->
+  <section id="resume" class="container py-5 text-center">
+    <h2 class="section-title">My Resume</h2>
+    <a href="Simran_Resume.pdf" download class="btn btn-main mb-4">Download Resume</a>
+    <br />
+    <iframe src="Simran_Resume.pdf" width="80%" height="500px" style="border: 1px solid #ccc; margin-top: 20px;"></iframe>
   </section>
 
-
-  <!-- Skills -->
+  <!-- Skills Section -->
   <section class="container py-5" id="skills">
     <h2 class="section-title">Skills</h2>
     <ul>
-      <li>HTML5, CSS3, JavaScript</li>
+      <li>HTML5, CSS3</li>
       <li>Bootstrap, Responsive Design</li>
       <li>Python, Django (MVT architecture)</li>
       <li>Git & GitHub</li>
     </ul>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects Section -->
   <section class="container py-5" id="projects">
     <h2 class="section-title">Projects</h2>
 
     <div class="row g-4">
-      <div class="col-md-6">
+      <div class="col-md-6 d-flex">
         <div class="project-card">
           <h5>Blog Website <i class="fas fa-book-open text-secondary"></i></h5>
           <p>A simple Django blog where users can create, edit, and delete posts.</p>
           <a href="https://github.com/Sia290/blog-website" target="_blank">View on GitHub</a>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 d-flex">
         <div class="project-card">
           <h5>To-Do App <i class="fas fa-list-check text-secondary"></i></h5>
           <p>A task manager built using Django to add, update, and remove tasks.</p>
@@ -177,12 +188,12 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section class="container py-5" id="contact">
     <h2 class="section-title">Contact Me</h2>
     <p><i class="fas fa-envelope"></i> simranrathore290@gmail.com</p>
     <p><i class="fab fa-github"></i> <a href="https://github.com/Sia290" target="_blank">github.com/Sia290</a></p>
-    <p><i class="fab fa-linkedin"></i> (www.linkedin.com/in/simran-rathore-571923337)</p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/simran-rathore-571923337" target="_blank">www.linkedin.com/in/simran-rathore-571923337  </a></p>
   </section>
 
   <!-- Footer -->
